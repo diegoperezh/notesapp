@@ -4,14 +4,14 @@ customHeaders:
       - key: 'Strict-Transport-Security'
         value: 'max-age=31536000; includeSubDomains'
       - key: 'X-Origin-Verify'
-        value: '${CUSTOM_HEADER_VALUE}'
+        value: 'MySuperSecretCustomHeader'
       - key: 'X-Frame-Options'
         value: 'SAMEORIGIN'
       - key: 'X-Content-Type-Options'
         value: 'nosniff'
     conditions:
       - key: 'X-Origin-Verify'
-        value: '${CUSTOM_HEADER_VALUE}'
+        value: 'MySuperSecretCustomHeader'
         status: '403'
         pattern: '!matches'
 
